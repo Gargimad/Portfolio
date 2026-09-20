@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gargi Madala | Student Developer</title>
+  <meta content="Portfolio of Gargi Madala, a high school student building web apps, Python tools, and dashboards." name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts (trimmed to the weights the template actually uses) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Carter+One&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Card styles for Skills and Projects -->
+  <style>
+    .card-grid { display: grid; gap: 16px; }
+    .skill-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); margin-bottom: 8px; }
+    .project-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+
+    .card-group-title { font-size: 1.1rem; font-weight: 600; margin: 24px 0 12px; }
+    .card-group-title:first-child { margin-top: 0; }
+
+    .skill-card,
+    .project-card { border-radius: 16px; background: var(--surface-color, #fffaf2); border: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%); }
+
+    .skill-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; }
+    .skill-card i { font-size: 1.9rem; line-height: 1; color: var(--accent-color, #c2185b); flex-shrink: 0; }
+    .skill-card strong { display: block; color: var(--heading-color, #2b1245); font-size: 1rem; }
+    .skill-card span { display: block; font-size: .85rem; color: color-mix(in srgb, var(--default-color), transparent 15%); }
+
+    .project-card { display: flex; flex-direction: column; overflow: hidden; text-decoration: none; color: var(--default-color, #3a2c4d); transition: transform .2s ease, box-shadow .2s ease; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px color-mix(in srgb, var(--heading-color), transparent 82%); }
+    .project-card:focus-visible { outline: 3px solid var(--accent-color, #c2185b); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { .project-card { transition: none; } .project-card:hover { transform: none; } }
+
+    .project-img { aspect-ratio: 16 / 10; background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 80%), color-mix(in srgb, var(--heading-color), transparent 80%)); }
+    .project-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .project-body { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px 20px; flex: 1; }
+    .project-body h4 { margin: 0; font-size: 1.15rem; font-weight: 600; color: var(--heading-color, #2b1245); }
+    .project-body p { margin: 0; font-size: .95rem; color: color-mix(in srgb, var(--default-color), transparent 10%); flex: 1; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+    .project-tags li { font-size: .78rem; padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent-color), transparent 88%); color: var(--heading-color); }
+    .project-link { display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; font-weight: 600; color: var(--heading-color, #2b1245); }
+    .project-link i { color: var(--accent-color, #c2185b); }
+  </style>
+
+  <!-- Template: iPortfolio by BootstrapMade (https://bootstrapmade.com/license/) -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/profile.jpg" alt="Photo of Gargi Madala" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Gargi Madala</h1>
+    </a>
+
+    <!-- TODO: replace both URLs with your real profiles -->
+    <div class="social-links text-center">
+      <a href="https://github.com/YOUR-USERNAME" class="github" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/YOUR-USERNAME" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i class="bi bi-code-slash navicon"></i> Skills</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Experience</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/profile.jpg" alt="" data-aos="fade-in">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Gargi Madala</h2>
+        <p>I'm a <span class="typed" data-typed-items="JCHS Student, FBLA Competitor, Full Stack Developer, Python Tutor">Developer</span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/aboutPic.png" class="img-fluid" alt="Gargi Madala">
+          </div>
+
+          <div class="col-lg-6">
+            <h2>About</h2>
+            <p>Hi! Nice to meet you. I'm Gargi Madala, a JCHS student who plans to major in Computer Science. Coding is my favorite thing to do. So far I've worked with HTML, CSS, JavaScript, Python, MySQL, SQLite, and ProtegeSQL. I've built Python interfaces, web apps that I deploy with Vercel, and Streamlit dashboards.</p>
+            <p>I have a life outside of coding, too! I knit (I'm working on a blanket right now), I pray with Chinmaya Gurukul, and I love to tutor. I'm part of 2 tutoring groups and have reached 30+ students.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Languages and tools I'm comfortable with. I still have so much more to learn!</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <h3 class="card-group-title">Languages</h3>
+        <div class="card-grid skill-grid">
+          <div class="skill-card"><i class="bi bi-filetype-py"></i><div><strong>Python</strong><span>Interfaces &amp; dashboards</span></div></div>
+          <div class="skill-card"><i class="bi bi-filetype-js"></i><div><strong>JavaScript</strong><span>Interactive web apps</span></div></div>
+          <div class="skill-card"><i class="bi bi-filetype-html"></i><div><strong>HTML</strong><span>Page structure</span></div></div>
+          <div class="skill-card"><i class="bi bi-filetype-css"></i><div><strong>CSS</strong><span>Layout &amp; styling</span></div></div>
+          <div class="skill-card"><i class="bi bi-filetype-sql"></i><div><strong>SQL</strong><span>Databases &amp; queries</span></div></div>
+        </div>
+
+        <h3 class="card-group-title">Tools</h3>
+        <div class="card-grid skill-grid">
+          <div class="skill-card"><i class="bi bi-bar-chart-line"></i><div><strong>Streamlit</strong><span>Python dashboards</span></div></div>
+          <div class="skill-card"><i class="bi bi-cloud-arrow-up"></i><div><strong>Vercel</strong><span>Deploying web apps</span></div></div>
+          <div class="skill-card"><i class="bi bi-database"></i><div><strong>Databases</strong><span>MySQL, SQLite, ProtegeSQL</span></div></div>
+          <div class="skill-card"><i class="bi bi-file-earmark-spreadsheet"></i><div><strong>Excel</strong><span>Spreadsheets &amp; data</span></div></div>
+          <div class="skill-card"><i class="bi bi-palette"></i><div><strong>Canva</strong><span>Graphics &amp; design</span></div></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Projects Section -->
+    <!-- TODO for EACH card below:
+         1. Put a screenshot in assets/img/projects/ and match the file name in the <img src>.
+         2. Replace [Project name], the description, and the tech tags.
+         3. Set href to the main link (live site or GitHub repo).
+         Need more or fewer cards? Copy or delete a whole <a class="project-card"> block. -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>Things I've built. Click any card to open the project.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="card-grid project-grid">
+
+          <a class="project-card" href="https://gargimad.github.io/Johns-Creek-HS-Aviation/" target="_blank" rel="noopener noreferrer">
+            <div class="project-img"><img src="assets/img/portfolio/project-1.png" alt="Screenshot of JCHS Aviation Website" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="project-body">
+              <h4>JCHS Aviation Website</h4>
+              <p>A website for the JCHS Aviation club, showcasing their achievements and events.</p>
+              <ul class="project-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <span class="project-link">View project <i class="bi bi-box-arrow-up-right"></i></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://mat-webapp.vercel.app/ " target="_blank" rel="noopener noreferrer">
+            <div class="project-img"><img src="assets/img/projects/project-2.jpg" alt="Screenshot of [Project name]" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="project-body">
+              <h4>Tutor Connect</h4>
+              <p>A platform for connecting students with tutors for wonderful learning experiences.</p>
+              <ul class="project-tags"><li>HTML</li><li>CSS</li><li>Node.js</li><li>Supabase</li><li>Vercel</li></ul>
+              <span class="project-link">View project <i class="bi bi-box-arrow-up-right"></i></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://devpost.com/software/signstudio-united-hacks-v7-project " target="_blank" rel="noopener noreferrer">
+            <div class="project-img"><img src="assets/img/projects/project-3.jpg" alt="Screenshot of [Project name]" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="project-body">
+              <h4>SignStudio</h4>
+              <p>A web app that allows users to help translate gestures including sign language from various countries</p>
+              <ul class="project-tags"><li>Python</li><li>Streamlit</li><li>OpenCV</li><li>MediaPipe</li></ul>
+              <span class="project-link">View project <i class="bi bi-box-arrow-up-right"></i></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://youtu.be/35adXRD7mYc " target="_blank" rel="noopener noreferrer">
+            <div class="project-img"><img src="assets/img/projects/project-4.jpg" alt="Screenshot of [Project name]" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="project-body">
+              <h4>Avolingo</h4>
+              <p>A language learning app that helps users practice speaking and listening skills with flashcards</p>
+              <ul class="project-tags"><li>Python</li><li>Tkinter</li></ul>
+              <span class="project-link">View project <i class="bi bi-box-arrow-up-right"></i></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" target="_blank" rel="noopener noreferrer">
+            <div class="project-img"><img src="assets/img/projects/project-5.jpg" alt="Screenshot of [Project name]" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="project-body">
+              <h4>[Project name]</h4>
+              <p>[1-2 sentences: what it does and who it's for.]</p>
+              <ul class="project-tags"><li>[Tech]</li><li>[Tech]</li></ul>
+              <span class="project-link">View project <i class="bi bi-box-arrow-up-right"></i></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" target="_blank" rel="noopener noreferrer">
+            <div class="project-img"><img src="assets/img/projects/project-6.jpg" alt="Screenshot of [Project name]" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="project-body">
+              <h4>[Project name]</h4>
+              <p>[1-2 sentences: what it does and who it's for.]</p>
+              <ul class="project-tags"><li>[Tech]</li><li>[Tech]</li></ul>
+              <span class="project-link">View project <i class="bi bi-box-arrow-up-right"></i></span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Projects Section -->
+
+    <!-- Experience Section -->
+    <!-- TODO: fill in the bracketed details with your real dates, events, and results. -->
+    <section id="resume" class="resume section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Experience</h2>
+        <p>School, competitions, and teaching.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>[Full school name] (JCHS)</h4>
+              <h5>[Start year] - [Expected graduation year]</h5>
+              <p><em>[City, State]</em></p>
+              <ul>
+                <li>[Relevant courses, e.g. AP Computer Science]</li>
+                <li>[GPA, honors, or awards if you'd like to share them]</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Activities</h3>
+            <div class="resume-item">
+              <h4>Python Tutor</h4>
+              <h5>[Start year] - Present</h5>
+              <p><em>2 tutoring groups</em></p>
+              <ul>
+                <li>Have taught 30+ students</li>
+                <li>[What you teach, e.g. Python basics, loops, functions]</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>FBLA Competitor</h4>
+              <h5>[Start year] - Present</h5>
+              <p><em>Future Business Leaders of America</em></p>
+              <ul>
+                <li>[Events you compete in and any placements]</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Experience Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Want to work together or just say hi? Email me.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="info-wrap">
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:gargimadala10@gmail.com">gargimadala10@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-github flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p><a href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME</a></p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-linkedin flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p><a href="https://www.linkedin.com/in/YOUR-USERNAME">linkedin.com/in/YOUR-USERNAME</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Gargi Madala</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- Keep these credit links: they are required by the free template license. -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files (only what main.js still needs) -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
